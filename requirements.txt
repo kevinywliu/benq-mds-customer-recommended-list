@@ -1,0 +1,9 @@
+streamlit==0.84.2
+pandas==1.2.5
+scikit-learn==0.22.1
+matplotlib==3.4.3
+plotly
+statsmodels
+seaborn
+stqdm
+xgboost==0.90
