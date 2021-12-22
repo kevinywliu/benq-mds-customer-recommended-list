@@ -387,7 +387,7 @@ def prediction():
     st.subheader('請上傳模型訓練檔案')
     
     #uploaded_file = st.file_uploader("請上傳之前dat模型訓練檔案", type=["dat"])
-    uploaded_file = st.file_uploader("請上傳之前dat模型訓練檔案")
+    uploaded_file = st.file_uploader("請上傳之前pkl模型訓練檔案")
     
     # 要上傳檔案
     if uploaded_file is not None:
