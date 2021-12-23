@@ -392,7 +392,7 @@ def prediction():
     # 要上傳檔案
     if uploaded_file is not None:
         # model_xgb = pd.read_csv(uploaded_file)
-        model_xgb = pickle.load(open(uploaded_file.read(), "rb"))
+        model_xgb = pickle.load(open(uploaded_file.name + ".pkl", "rb"))
         
     else:
         st.write('等待上傳資料輸入~')
@@ -409,7 +409,7 @@ def prediction():
     # 要上傳檔案
     if uploaded_file is not None:
         # model_xgb = pd.read_csv(uploaded_file)
-        sc = pickle.load(open(uploaded_file.read(), "rb"))
+        sc = pickle.load(open(uploaded_file.name + ".pkl", "rb"))
         
     else:
         st.write('等待上傳資料輸入~')
@@ -439,5 +439,5 @@ def prediction():
                 test_uid=newdata_uid, 
                 name = name)
     
-
+    
     
