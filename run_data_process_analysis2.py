@@ -392,8 +392,7 @@ def prediction():
     # 要上傳檔案
     if uploaded_file is not None:
         # model_xgb = pd.read_csv(uploaded_file)
-        open_file = convertToBinaryData(uploaded_file.filename)
-        model_xgb = pickle.load(open(open_file, "rb"))
+        model_xgb = pickle.load(open(uploaded_file.read(), "rb"))
         
     else:
         st.write('等待上傳資料輸入~')
@@ -410,8 +409,7 @@ def prediction():
     # 要上傳檔案
     if uploaded_file is not None:
         # model_xgb = pd.read_csv(uploaded_file)
-        open_file = convertToBinaryData(uploaded_file.filename)
-        sc = pickle.load(open(open_file, "rb"))
+        sc = pickle.load(open(uploaded_file.read(), "rb"))
         
     else:
         st.write('等待上傳資料輸入~')
@@ -441,9 +439,5 @@ def prediction():
                 test_uid=newdata_uid, 
                 name = name)
     
-def convertToBinaryData(filename):
-    # Convert digital data to binary format
-    with open(filename, 'rb') as file:
-        binaryData = file.read()
-    return binaryData    
+
     
